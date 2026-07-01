@@ -1,0 +1,9 @@
+class Solution {
+    public int busyStudent(int[] st, int[] et, int qt) {
+        int count =0;
+        for(int i=0;i<et.length;i++){
+            if(qt>=st[i] && qt<=et[i]) count++;
+        }
+        return count;
+    }
+}
