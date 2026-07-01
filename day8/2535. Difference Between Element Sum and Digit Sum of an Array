@@ -1,0 +1,19 @@
+class Solution {
+    public int differenceOfSum(int[] arr) {
+        int sumofarr =0;
+        int sumofdigit =0;
+        for(int i=0;i<arr.length-1;i++){
+           sumofarr = sumofarr + arr[i];
+        }
+        for(int i=0;i<arr.length-1;i++){
+            int num = arr[i];
+            int div =1;
+            while(div<=num){
+                int ld = (num%(div*10)/div);
+                sumofdigit = sumofdigit + ld;
+                div = div*10;
+            }  
+        }
+        return sumofarr-sumofdigit;
+    }
+}
